@@ -29,6 +29,7 @@ h1 {
 }
 
 .dialogueBanner {
+	text-align: center;
 	margin: 0px auto;
 	width: 1600px;
 }
