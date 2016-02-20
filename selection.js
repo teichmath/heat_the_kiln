@@ -1,5 +1,6 @@
 var getDragonA =  document.querySelector("#dragonA")
 var dragonAstatus = false;
+getDragonA.style.border="10px solid #F0E68C";
 
 var changeSelectionStatus = function() {
   dragonAstatus = !dragonAstatus;
