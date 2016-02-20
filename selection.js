@@ -1,21 +1,12 @@
-$(document).ready(function(){
-	$('#dragonA').click($.proxy(selectionApp.changeSelectionStatus));
-});
+var getDragonA =  document.querySelector("#dragonA")
+var dragonAstatus = false;
 
+var changeSelectionStatus = function() {
+  dragonAstatus = !dragonAstatus;
+  console.log(dragonAstatus);
+  	if(dragonAstatus) getDragonA.style.border="10px solid #F0E68C";
+		else getDragonA.style.border = "none";
+}
 
-var selectionApp = (function (){
-	//private variables and functions (hidden props)
- 	var dragonAstatus = false;
+getDragonA.addEventListener('click', changeSelectionStatus);
 
-	return {
-		//public props
-	
-		changeSelectionStatus: function(){
-		  dragonAstatus = !dragonAstatus;
-  		  var imgTag=document.getElementsByTagName('dragonA');
-		  if(dragonAstatus) imgTag.style.border='2px solid #F0E68C';
-		  else imgTag.style.border = 'none';
-		}
-	};
-
-})();
